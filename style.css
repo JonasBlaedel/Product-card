@@ -1,0 +1,130 @@
+:root {
+  /* Colors */
+  --card-surface: #e5e5e5;
+  --info-box-surface: #fff;
+
+  --color-option-1: #000;
+  --color-option-2: #efdbb8;
+  --color-option-3: #d8deff;
+
+  --card-like-btn-surface: #fff;
+  --card-like-btn-color: #000;
+
+  /* Spacing */
+  --card-padding: 1rem;
+  --info-box-padding: 1.25rem;
+  --info-box-gap: 1rem;
+  --card-option-gap: 1ch;
+
+  /* Dimensions */
+  --card-option-width: 1.25rem;
+  --card-option-height: 1.25rem;
+
+  --card-like-btn-width: 1.5rem;
+  --card-like-btn-height: 1.5rem;
+
+  /* Font sizes */
+  --card-title: 0.8rem;
+  --card-price: 1.35rem;
+
+  /* border-radii */
+  --card-radius: calc(var(--card-padding) + var(--info-box-radius));
+  --info-box-radius: 1.75rem;
+  --card-button-radius: 15px;
+}
+
+.card {
+  max-width: 400px;
+  background: var(--card-surface);
+  padding: var(--card-padding);
+  position: relative;
+  border-radius: var(--card-radius);
+}
+
+.container_svg {
+  position: absolute;
+  right: 5%;
+  top: 3%;
+  width: 50px;
+  height: 50px;
+  background-color: var(--card-like-btn-surface);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info_container {
+  background-color: var(--card-like-btn-surface);
+  padding: var(--info-box-padding);
+  border-radius: var(--info-box-radius);
+  display: flex;
+}
+
+h3 {
+  font-size: var(--card-title);
+  font-weight: 300;
+  margin-bottom: var(--card-option-gap);
+}
+p {
+  font-size: var(--card-price);
+}
+
+.dot {
+  width: var(--card-option-width);
+  height: var(--card-option-height);
+  border-radius: var(--card-button-radius);
+}
+.dot:nth-child(1) {
+  background-color: #18171c;
+}
+.dot:nth-child(2) {
+  background-color: #efdbb8;
+}
+.dot:nth-child(3) {
+  background-color: #d8deff;
+}
+
+.selected {
+  border: 1px solid black;
+}
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  gap: var(--card-option-gap);
+  place-self: center;
+  margin-left: auto;
+}
+
+@layer reset {
+  html {
+    background: #fff;
+    font-family: system-ui;
+  }
+
+  body {
+    margin: 2rem;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  button {
+    border: 0;
+  }
+
+  img {
+    inline-size: 100%;
+    display: block;
+  }
+
+  ul,
+  ol,
+  menu {
+    padding: 0;
+    list-style: none;
+  }
+}
